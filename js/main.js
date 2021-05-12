@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
         mainSliderTimeout = setTimeout(showSlides, (1000 * 10)); // Change image every 10 seconds
     }
 
-    const pointer = () => {
+    const pointer = (sectionId) => {
         if (window.matchMedia("(min-width: 768px)").matches) {
             let mousePosX = 0,
                 mousePosY = 0,
-                mouseCircle = document.getElementById("mouse-circle");
+                mouseCircle = document.getElementById(sectionId);
 
             document.onmousemove = (e) => {
                 mousePosX = e.pageX;
@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 revisedMousePosX = 0,
                 revisedMousePosY = 0;
 
-            function delayMouseFollow() {
-                if (isAnimationRequired)
-                    requestAnimationFrame(delayMouseFollow);
-                else
-                    cancelAnimationFrame(delayMouseFollow)
-
-                revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+                function delayMouseFollow() {
+                    if (isAnimationRequired)
+                        requestAnimationFrame(delayMouseFollow);
+                    else
+                        cancelAnimationFrame(delayMouseFollow)
+    
+                    revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
                 revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
 
                 mouseCircle.style.top = revisedMousePosY + "px";
@@ -69,8 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     showSlides()
-    soundSection.addEventListener("mouseenter", () => { isAnimationRequired = true; pointer() });
-    soundSection.addEventListener("mouseleave", () => { isAnimationRequired = false; pointer() });
+    soundSection.addEventListener("mouseenter", () => { isAnimationRequired = true; pointer(`mouse-circle`) });
+    soundSection.addEventListener("mouseleave", () => { isAnimationRequired = false; pointer(`mouse-circle`) });
+
+    frontRow.addEventListener("mouseenter", () => { isAnimationRequired = true; pointer(`reveal-circle`) });
+    frontRow.addEventListener("mouseleave", () => { isAnimationRequired = false; pointer(`reveal-circle`) });
+
     speaker.addEventListener(`click`, toggleAudio)
     try_now.forEach(single =>
         single.addEventListener(`click`, () => priceSection.scrollIntoView())

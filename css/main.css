@@ -595,7 +595,7 @@ footer {
     padding: 6em 0;
 }
 
-#mouse-circle {
+#mouse-circle, #reveal-circle {
     position: absolute;
     width: 64px;
     z-index: 9999999;
@@ -607,11 +607,23 @@ footer {
     box-shadow: 0 0 16px rgba(255, 255, 255, 0);
 }
 
-#mouse-circle span {
+#reveal-circle {
+    width: 94px;
+    height: 94px;
+    border: 3px solid #000;
+}
+
+#mouse-circle span, #reveal-circle span {
     z-index: 9999999;
     position: relative;
     top: 21px;
     left: 12px;
     color: white;
     font-weight: bold;
+}
+
+#reveal-circle span {
+    top: 36px;
+    left: 20px;
+    color: black;
 }
