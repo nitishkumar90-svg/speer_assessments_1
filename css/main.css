@@ -97,6 +97,10 @@
     padding: 1em 0;
 }
 
+.pad-bottom-1 {
+    padding-bottom: 1em;
+}
+
 .color-black {
     color: black;
 }
@@ -263,6 +267,7 @@ form .flex div:nth-child(1) input {
     display: none;
     height: 100vh;
     width: 100%;
+    z-index: 5;
 }
 
 .slide img {
@@ -273,10 +278,6 @@ form .flex div:nth-child(1) input {
 .basic-slider {
     clear: both;
     height: 100vh;
-}
-
-.hero-section .content {
-    padding: 1em;
 }
 
 .secondary-button {
@@ -523,6 +524,10 @@ form .flex div:nth-child(1) input {
     padding-left: 0.5em;
 }
 
+.active-slide i {
+    font-weight: 900 !important;
+}
+
 form label {
     font-weight: bold;
 }
@@ -588,4 +593,25 @@ input[type='radio']:checked:after {
 footer {
     background-color: #5E33D1;
     padding: 6em 0;
+}
+
+#mouse-circle {
+    position: absolute;
+    width: 64px;
+    z-index: 9999999;
+    height: 64px;
+    margin: -32px 0px 0px -32px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    pointer-events: none !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+}
+
+#mouse-circle span {
+    z-index: 9999999;
+    position: relative;
+    top: 21px;
+    left: 12px;
+    color: white;
+    font-weight: bold;
 }

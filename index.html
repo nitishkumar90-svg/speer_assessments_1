@@ -27,9 +27,9 @@
                     <button class="open"><i class="fas fa-bars"></i></button>
                     <ul class="menu">
                         <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="#sound">Sound</a></li>
-                        <li><a href="#first_row">Front Row</a></li>
-                        <li><a href="#perks">Perks</a></li>
+                        <li><a href="javascript:void(0)">Sound</a></li>
+                        <li><a href="javascript:void(0)">Front Row</a></li>
+                        <li><a href="javascript:void(0)">Perks</a></li>
                     </ul>
                     <h1 class="logo">EXP | CON</h1>
                 </nav>
@@ -43,7 +43,7 @@
                         <p>Experience your favourite artists like never <br />before and from the comfort of your own
                             home.
                         </p>
-                        <button class="btn-mix-noborder">TRY IT NOW</button>
+                        <button class="btn-mix-noborder got-to-pricing">TRY IT NOW</button>
                     </div>
                 </article>
                 <article class="slide">
@@ -54,7 +54,7 @@
                         <p>Experience your favourite artists like never <br />before and from the comfort of your own
                             home.
                         </p>
-                        <button class="btn-mix-noborder">TRY IT NOW</button>
+                        <button class="btn-mix-noborder got-to-pricing">TRY IT NOW</button>
                     </div>
                 </article>
                 <article class="slide">
@@ -65,22 +65,26 @@
                         <p>Experience your favourite artists like never <br />before and from the comfort of your own
                             home.
                         </p>
-                        <button class="btn-mix-noborder">TRY IT NOW</button>
+                        <button class="btn-mix-noborder got-to-pricing">TRY IT NOW</button>
                     </div>
                 </article>
             </div>
             <nav class="slider-pagination  text-center">
                 <ul class="flex flex-center">
-                    <li><a href="javascript:void(0)"><i class="fas fa-circle"></i></a></li>
-                    <li><a href="javascript:void(0)"><i class="far fa-circle"></i></a></li>
-                    <li><a href="javascript:void(0)"><i class="far fa-circle"></i></a></li>
+                    <li><a href="javascript:void(0)" id="1" class="slide-pagination"><i class="far fa-circle"></i></a>
+                    </li>
+                    <li><a href="javascript:void(0)" id="2" class="slide-pagination"><i class="far fa-circle"></i></a>
+                    </li>
+                    <li><a href="javascript:void(0)" id="3" class="slide-pagination"><i class="far fa-circle"></i></a>
+                    </li>
                 </ul>
             </nav>
         </section>
-        <section class="superior-sound" id="sound">
+        <section class="superior-sound" id="sound-section">
             <div class="container">
+                <div id="mouse-circle"><span>Click</span></div>
                 <div class="try-now text-right">
-                    <button class="try-button">TRY IT NOW</button>
+                    <button class="try-button got-to-pricing">TRY IT NOW</button>
                 </div>
                 <div class="grid grid-cols-2">
                     <div class="content pad-top-2">
@@ -89,7 +93,11 @@
                         <button class="secondary-button secondary-button-gradient">SEE DEMO</button>
                     </div>
                     <div class="grid grid-cols-2 text-right speaker">
-                        <a href="javascript:void(0)"><img src="./resources/images/speaker.png"></a>
+                        <a href="javascript:void(0)" id="play-speaker"><img src="./resources/images/speaker.png"></a>
+                        <audio id="audio" class="hidden" controls>
+                            <source src="./resources/music/energy.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
                     </div>
                 </div>
             </div>
@@ -97,7 +105,7 @@
         <section class="front-row" id="first_row">
             <div class="container">
                 <div class="try-now text-right">
-                    <button class="try-button">TRY IT NOW</button>
+                    <button class="try-button got-to-pricing">TRY IT NOW</button>
                 </div>
                 <div class="content text-left">
                     <div class="content pad-top-2">
@@ -107,10 +115,10 @@
                     </div>
                 </div>
         </section>
-        <section class="perks" id="perks">
+        <section class="perks" id="perks-section">
             <div class="container">
                 <div class="try-now text-right">
-                    <button class="try-button btn-mix-noborder">TRY IT NOW</button>
+                    <button class="try-button btn-mix-noborder got-to-pricing">TRY IT NOW</button>
                 </div>
                 <h1 class="font-50 font-bold color-white pad-top-2">PERKS</h1>
                 <div class="grid grid-cols-3 grid-gap-5">
@@ -195,9 +203,9 @@
                 </div>
             </div>
         </section>
-        <section class="section-payment">
+        <section class="section-payment" id="price-section">
             <div class="container">
-                <h1 class="font-50 pad-1">PAYMENT</h1>
+                <h1 class="font-50 pad-bottom-1">PAYMENT</h1>
                 <div class="pad-top-2">
                     <div>
                         <p class="font-50">1. Select your plan</p>
@@ -294,6 +302,7 @@
             <p class="pad-top-2 color-white">2019 &copy; All Rights Reserved | Speer Technologies Incorporated</p>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

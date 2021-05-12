@@ -43,7 +43,7 @@ img {
 }
 
 button, a {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 ul {
