@@ -10,6 +10,10 @@
     <title>EXP | CON</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/bb1feba9b1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -137,9 +141,9 @@
                             <img src="./resources/images/review-speaker-2.png" alt="">
                         </div>
                     </div>
-                    <div>
-                        <h1>REVIEWS</h1>
-                        <div class="grid grid-cols-3">
+                    <div class="review-div">
+                        <h1 class="color-white font-50">REVIEWS</h1>
+                        <div class="grid grid-cols-3 stars-div grid-gap-5">
                             <div>
                                 <div class="stars">
                                     <span><i class="fas fa-star"></i></span>
@@ -148,8 +152,8 @@
                                     <span><i class="fas fa-star"></i></span>
                                     <span><i class="fas fa-star"></i></span>
                                 </div>
-                                <h4>ARTIST</h4>
-                                <p>Love it, it's the Best. I can't live without it!</p>
+                                <h4 class="color-white font-20 pad-top-2">ARTIST</h4>
+                                <p class="font-20 pad-top-1">Love it, it's the Best. I can't live without it!</p>
                             </div>
                             <div>
                                 <div class="stars">
@@ -159,8 +163,8 @@
                                     <span><i class="fas fa-star"></i></span>
                                     <span><i class="fas fa-star"></i></span>
                                 </div>
-                                <h4>PRODUCER</h4>
-                                <p>Love it, it's the Best. I can't live without it!</p>
+                                <h4 class="color-white font-20 pad-top-2">PRODUCER</h4>
+                                <p class="font-20 pad-top-1">Love it, it's the Best. I can't live without it!</p>
                             </div>
                             <div>
                                 <div class="stars">
@@ -170,37 +174,126 @@
                                     <span><i class="fas fa-star"></i></span>
                                     <span><i class="fas fa-star"></i></span>
                                 </div>
-                                <h4>MUSIC FAN</h4>
-                                <p>Love it, it's the Best. I can't live without it!</p>
+                                <h4 class="color-white font-20 pad-top-2">MUSIC FAN</h4>
+                                <p class="font-20 pad-top-1">Love it, it's the Best. I can't live without it!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="app">
+        <section class="section-app">
             <div class="container">
                 <div class="grid grid-cols-3">
-                    <div class="app-info grid-span-2">
-                        <h1 class="red">GET EXP|CON NOW</h1>
-                        <p>Purchase and download the app.</p>
+                    <div class="app-info grid-span-1">
+                        <h1 class="red">GET EXP | CON NOW</h1>
+                        <p class="pad-top-1 font-35 color-white">Purchase and download the app.</p>
                     </div>
                     <div class="button">
-                        <button>TRY IT NOW</button>
+                        <button class="btn-mix-noborder">TRY IT NOW</button>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+        <section class="section-payment">
+            <div class="container">
+                <h1 class="font-50 pad-1">PAYMENT</h1>
+                <div class="pad-top-2">
+                    <div>
+                        <p class="font-50">1. Select your plan</p>
+                        <div class="flex pad-top-1 pad-left-half">
+                            <div class="pad-right-2">
+                                <input type="radio" name="plan" id="basic">
+                                <label class="perk1 font-20 font-bold" for="basic">BASIC</label>
+                            </div>
+                            <div class="pad-right-2">
+                                <input type="radio" checked name="plan" id="advanced">
+                                <label class="perk3 font-20 font-bold" for="advanced">ADVANCED</label>
+                            </div>
+                            <div class="pad-right-2">
+                                <input type="radio" name="plan" id="pro">
+                                <label class="perk2 font-20 font-bold" for="pro">PRO</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-50 pad-top-1">2. Billing Information</p>
+                        <form class="grid grid-cols-2 grid-gap-5">
+                            <div class="form-left">
+                                <div>
+                                    <label>FULL NAME</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label>BILLING ADDRESS</label>
+                                    <input type="text">
+                                </div>
+                                <div class="flex flex-gap-4">
+                                    <div>
+                                        <label>CITY</label>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <label>POSTAL CODE</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>COUNTRY</label>
+                                    <select name="" id="">
+                                        <option value="">SELECT</option>
+                                        <option value="1">Canada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-right">
+                                <div>
+                                    <label>CARDHOLDER'S NAME</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label>CARD NUMBER</label>
+                                    <input type="text">
+                                </div>
+                                <div class="flex flex-gap-4">
+                                    <div>
+                                        <label>EXPIRY MONTH</label>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <label>EXPIRY YEAR</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>CVV</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <p class="pad-top-1">By Continuing, I acknowledge that I've read and agree<br />to the <a
+                                class="color-blue" href="">Terms of Service</a> & <a class="color-blue" href="">Privacy
+                                Policy</a></p>
+                        <div class="pad-top-2">
+                            <button class="try-button btn-mix-noborder color-black">DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!-- <footer>
+    <footer>
         <div class="container">
-            <h4><span><i class="fas fa-envelope"></i></span>support@experienceconcerts.co</h4>
+            <p class="color-white font-20"><span class="pad-right-half"><i
+                        class="fas fa-envelope"></i></span>support@experienceconcerts.co</p>
         </div>
-        <div class="company-info text-center">
-            <h1>EXP|CON</h1>
-            <p>2019 &copy; All Rights Reserved | Speer Technologies Incorporated</p>
+        <div class="company-info text-center pad-top-2">
+            <h1 class="color-white font-50">EXP | CON</h1>
+            <p class="pad-top-2 color-white">2019 &copy; All Rights Reserved | Speer Technologies Incorporated</p>
         </div>
-    </footer> -->
+    </footer>
 </body>
 
 </html>

@@ -1,12 +1,14 @@
 :root {
-    --font-family: 'Quicksand', sans-serif;
+    --font-family: 'Roboto', sans-serif;
     --secondary-font-family: 'Poppins', sans-serif;
-    --primary-color:#EC7969;
+    --primary-color: #EC7969;
     --secondary-color: #000000;
     --perk1: #D34848;
     --perk2: #1FE1E9;
     --perk3: #FFB33F;
     --review-section: #1FE1E9;
+    --app-color: #D34848;
+    --color-blue: blue;
 }
 
 * {
@@ -25,19 +27,19 @@ body {
     background-color: var(--secondary-color);
 }
 
-h1,h2,h3,h4,h5,h6,a,p,span {
+h1, h2, h3, h4, h5, h6, a, p, span {
     color: var(--background-color);
 }
 
 a {
-    text-decoration: none; 
-    color: var(--background-color);  
+    text-decoration: none;
+    color: var(--background-color);
 }
 
 img {
-	width: 100%;
-	height: auto;
-	vertical-align: bottom;
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 button, a {
@@ -45,18 +47,18 @@ button, a {
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 ul.ul {
-	list-style-type: disc;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	padding-inline-start: 40px;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 .hidden {

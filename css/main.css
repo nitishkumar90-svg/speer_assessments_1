@@ -69,8 +69,8 @@
     grid-column: 2/ span 7;
 }
 
-.grid-span-8 {
-    grid-column: 2/ span 3;
+.grid-span-1 {
+    grid-column: 1/ span 2;
 }
 
 .flex-auto {
@@ -87,6 +87,26 @@
 
 .flex-gap-2 {
     gap: 2em;
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.pad-1 {
+    padding: 1em 0;
+}
+
+.color-black {
+    color: black;
+}
+
+.flex-gap-4 {
+    gap: 4em;
+}
+
+form .flex div:nth-child(1) input {
+    width: 110%;
 }
 
 .flex-right {
@@ -110,6 +130,10 @@
 
 .pad-top-2 {
     padding-top: 2em;
+}
+
+.font-20 {
+    font-size: 20px;
 }
 
 .font-35 {
@@ -326,7 +350,7 @@
     background-color: black;
 }
 
-[class*="btn-"]:hover {
+.basic-slider [class*="btn-"]:hover {
     padding: 1.5em 5em;
 }
 
@@ -449,13 +473,111 @@
     border-top: 3px solid var(--perk3);
 }
 
-
-
-
-
-
-
 .review-section {
     background-color: var(--review-section);
     padding: 4em 0;
+    height: 75vh;
+}
+
+.speaker-images-review img:nth-child(2) {
+    bottom: 12em;
+    left: 1em;
+}
+
+.speaker-images-review img {
+    position: relative;
+    right: 6em;
+}
+
+.review-div {
+    padding-left: 1em;
+}
+
+.review-div h1 {
+    padding-top: 1.5em;
+    display: inline-block;
+}
+
+.review-div .stars-div {
+    padding-top: 2em;
+}
+
+.stars span {
+    color: black;
+    font-size: 20px;
+}
+
+.pad-right-half {
+    padding-right: 0.4em;
+}
+
+.pad-right-2 {
+    padding-right: 2em;
+}
+
+.pad-left-half {
+    padding-left: 0.5em;
+}
+
+form input[type="text"], form select {
+    padding: 1em;
+    border: 2px solid;
+    width: 100%;
+    margin: 0.5em 0 1em 0;
+    font-family: inherit;
+}
+
+form input[type="text"]:focus {
+    border-bottom: 5px solid blue;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -4px;
+    left: -5px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -4px;
+    left: -5px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.section-app {
+    padding: 12em 0;
+}
+
+.section-app button {
+    margin-top: 4em;
+}
+
+.app-info h1 {
+    font-size: 60px;
+    color: var(--app-color);
+}
+
+.section-payment {
+    padding: 6em;
+    background-color: white;
+}
+
+footer {
+    background-color: #5E33D1;
+    padding: 6em 0;
 }
